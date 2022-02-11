@@ -2,13 +2,11 @@
 
 namespace AZabironin\Xlsxtojson;
 
-class Xlsxtojson extends ClientBase
+class Xlsxtojson extends ApiBase
 {
-    const BASE_URL = "https://api.xlsxtojson.com/";
-
-    public function __construct($token)
+    public function __construct()
     {
-        parent::__construct(self::BASE_URL, $token);
+        parent::__construct();
     }
 
     public function parse($filepath, $options)

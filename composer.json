@@ -19,5 +19,10 @@
             "email": "andrey@zabironin.ru"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "stable",
+    "scripts": {
+        "post-package-install": [
+            "AZabironin\\Xlsxtojson\\Installer::postPackageInstall"
+        ]
+    }
 }
