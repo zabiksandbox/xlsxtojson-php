@@ -21,9 +21,5 @@
         }
     ],
     "minimum-stability": "stable",
-    "scripts": {
-        "post-package-install": [
-            "AZabironin\\Xlsxtojson\\Installer::postPackageInstall"
-        ]
-    }
+    "prefer-stable": true
 }
