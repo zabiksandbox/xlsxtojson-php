@@ -5,7 +5,7 @@ use ComposerScriptEvent;
 
 class Installer
 {
-    public static function postPackageInstall(\Composer\Script\Event $event) {
+    public static function postPackageInstall(\Composer\Installer\PackageEvent $event) {
         $installedPackage = $event->getComposer()->getPackage();
 
         $rootDir = $event->getComposer()->getConfig()->get('vendor-dir').'/../';
