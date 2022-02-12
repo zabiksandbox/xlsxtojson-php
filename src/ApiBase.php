@@ -18,7 +18,7 @@ abstract class ApiBase
         $this->client = new \GuzzleHttp\Client([
             "base_uri" => "https://api.xlsxtojson.com/",
             "timeout" => $this->settings->TIMEOUT_SEC,
-            "verify" =>  $this->settings->CACERT_PEM,
+            "verify" =>  $this->settings->CACERT_PEM == "false" ? false : $this->settings->CACERT_PEM,
         ]);
 
     }
@@ -59,7 +59,7 @@ abstract class ApiBase
                     ]
                 ],
             ];
-            if ($this->settings->CACERT_KEY) {
+            if ($this->settings->CACERT_KEY != "false") {
                 $multipart['cert'] = [$this->settings->CACERT_KEY, $this->settings->CACERT_KEY_PASSPHRASE];
             }
             foreach($options as $key => $value) {

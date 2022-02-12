@@ -23,7 +23,7 @@ abstract class ClientBase
         $this->client = new \GuzzleHttp\Client([
             "base_uri" => "https://xlsxtojson.com/api/account/",
             "headers" => $headers,
-            "timeout" => $this->settings->TIMEOUT_SEC == "false" ? false : $this->settings->TIMEOUT_SEC,
+            "timeout" => $this->settings->TIMEOUT_SEC,
             "verify" =>  $this->settings->CACERT_PEM == "false" ? false : $this->settings->CACERT_PEM,
         ]);
     }
