@@ -15,7 +15,8 @@ class XlsxtojsonSettings
 
 		$rootDir = __DIR__.'/../../../../';
 
-        $dotenv->load($rootDir.'.env');
+		$dotenv = \Dotenv\Dotenv::createImmutable($rootDir);
+		$dotenv->safeLoad();
 
         $this->TIMEOUT_SEC 				= isset($_ENV['XLSXTOJSON_TIMEOUT_SEC']) ? $_ENV['XLSXTOJSON_TIMEOUT_SEC'] : 30;
 	    $this->CACERT_PEM 				= isset($_ENV['XLSXTOJSON_CACERT_PEM']) ? $_ENV['XLSXTOJSON_CACERT_PEM'] : false;
