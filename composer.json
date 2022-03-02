@@ -2,7 +2,7 @@
     "name": "a.zabironin/xlsxtojson",
     "description": "Parse xlsx files to json via api xlsxtojson.com",
     "type": "library",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "require": {
         "php": ">=5.6.0",
         "guzzlehttp/guzzle": "~6.0|^7.0",
@@ -11,7 +11,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "AZabironin\\Xlsxtojson\\": "src/"
+            "AZabironin\\Xlsxtojson": "src/"
         }
     },
     "authors": [
