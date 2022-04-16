@@ -25,10 +25,7 @@ abstract class ApiBase
 
     protected function get($url, $query = [])
     {
-        $response = $this->client->get($url, ["query" => $query]);
-        
-        print print_r($response->getBody(),1).PHP_EOL;
-
+        $response = $this->client->get($url, ["query" => $query]);        
         return json_decode($response->getBody(), true);
     }
 
@@ -40,7 +37,7 @@ abstract class ApiBase
         return json_decode($response->getBody(), true);
     }
 
-    protected function multipart($url, $filepath, $options)
+    protected function multipart($url, $filepath, $options = [])
     {
 
 
