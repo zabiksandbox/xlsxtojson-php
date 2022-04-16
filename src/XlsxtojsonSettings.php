@@ -11,11 +11,9 @@ class XlsxtojsonSettings
 	public $API_KEY;
 
 	public function __construct(){
-		$dotenv = new \Symfony\Component\Dotenv\Dotenv();
-
 		$rootDir = __DIR__.'/../../../../';
 
-		$dotenv = \Symfony\Component\Dotenv\Dotenv::createImmutable($rootDir);
+		$dotenv = \Dotenv\Dotenv::createImmutable($rootDir);
 		$dotenv->safeLoad();
 
         $this->TIMEOUT_SEC 				= isset($_ENV['XLSXTOJSON_TIMEOUT_SEC']) ? $_ENV['XLSXTOJSON_TIMEOUT_SEC'] : 30;
